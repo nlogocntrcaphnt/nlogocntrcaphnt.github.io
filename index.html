@@ -23,33 +23,32 @@
 			
 		}
 		.sidebar-list{
+			display: block;
 			color:white;
 			font-weight: bold;
 			text-decoration: underline;
 			font-variant: small-caps;
 			font-size:0.8em;
-			margin-left:37%;
+		
+			margin: auto;
+			text-align: left;
+			width: 500px;
 			
-
-			text-align: right;
-			float: left;
-
-			padding: 5px 5px 5px 5px;
+		
 		}
-
-		img{
+		.sidebar-list-links{
+			padding: 5px;
 			float:left;
+		}
+		img{
 			display: block;
-
+			
 			width: 320px;
 			height: auto;
 			border-style: double;
 			border-color: white;
 		}
-		#footnote{
-			padding: 10px;
-			text-align:center;
-		}
+
 </style>
 <!--		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="style.css">
@@ -64,11 +63,11 @@
 		</div>
 		
 		<div class="sidebar-list">
-			<h2>About</h2>
-      			<h2>Contact</h2>
-			
+			<div class="sidebar-list-links">
+				<h2>About</h2>
+      				<h2>Contact</h2>
+			</div>
+			<img src="images/profile.jpg">
      		</div>
-		<img src="images/profile.jpg">
-<!--		<small id="footnote">Under construction*.</small>-->
 	</body>
 </html>
