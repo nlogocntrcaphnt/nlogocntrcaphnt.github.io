@@ -4,6 +4,8 @@
 		<title></title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+		</script>
 		<style>
 		body {
 			margin-top: 10%;
@@ -22,6 +24,13 @@
 		#subtitle-text{
 			text-align:center;
 			font-size:0.95em;
+		}
+
+		.rss {
+ 			margin: 0;
+  			font-size: 16px;
+  			float: right;
+			background: url(rss-svgrepo-com.svg)
 		}
 		.sidebar-list{
 			display: block;
@@ -63,65 +72,141 @@
 			text-decoration:none;
 		}
 
-		.content{
+		#content{
 			width: 570px;
 			float: left;
 			border-style: double;
 			font-variant: small-caps;
 		}
-
-		p{
-			text-align:left;
-			padding-left: 15px;
-			padding-right: 30px;
+		#content h2{
+			text-align: center;
+			font-variant: small-caps;
+			font-weight: normal;
 		}
-
-		.note_line{
+		.external_links{
+			padding-bottom: 1%;
+			border: double;
+			float: left;
+			width: 15%;
+			margin-top: 6%;
+			font-variant: small-caps;
+		}
+		.external_links h1{
+			text-align: center;
+			font-variant: small-caps;
+		}
+		#link_line{
 			text-align:left;
 			width: 3%;
 			float:left;
-		}
-		#note_1_line{
-			margin-top: 5%;
-		}
-
-		#note_1_text{
-			padding: 5px 20px 7px 7px;
-			border-style: double;
-			float:left;
-			margin-top: 4%;
+			margin-top: 8%;
+			
 		}
 
-		video{
-			margin-left: 15px;
-			margin-bottom: 5px;
-			border-style: double;
+		.link{
+			border-width:thin;
+			font-weight: normal;
+			font-style:italic;
+			text-align: right;
+			margin-left: 25%;
+			padding-right: 5%;
+			font-variant: small-caps;
 		}
+		.caption{
+			font-size: 0.6em;
+			font-weight: normal;
+			text-align: left;
+			
+			
+			margin-right: 5%;
+		}
+
+		.post{
+		
+			width:62%;
+			padding-right: 5%;
+			margin-left: 5%;	
+		}
+		{
+			margin-top: 2%;
+			text-align:left;
+			margin-left: 5%;
+			padding-right: 2%;
+			}
+
 
 		.article-date{
+			font-weight: normal;
 			padding-left: 5px;
 			padding-bottom: 0px;
 			text-decoration: none;
-		}
-		.content img{
+			}
+		.article-image{
 			margin-left: 15px;
 			border: double;
 			width: 250px;
 			height: auto;
 			float: left;
 		}
+		#end-quote{
+			
+			margin-left: 55%;
+		}
+		#pinned_caption{
+			margin-left: 2%;		
+		}
+		
 </style>
 <!--		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 -->
+
+		<script type="text/javascript">
+			ImageArray = new Array();
+			ImageArray[0] = 'profile_1.jpg';
+			ImageArray[1] = 'profile_2.jpg';
+			
+			function getRandomImage(){
+				var num = Math.floor( Math.random() * 2);
+				var img = ImageArray[num];
+				document.getElementById("randImage").innerHTML = ('<img id="pfp" src="' + 'images/' + img + '">')
+			}
+		</script>
+		<script>
+			function loadHTML(id, filename, underline){
+   				console.log(`div id: ${id}, filename: ${filename}`);
+
+				let xhttp;
+				let element = document.getElementById(id);
+				let file = filename;
+
+				let unerlined_element = underline;
+
+				if ( file ){
+					xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function(){
+						if(this.readyState==4) {
+							if (this.status == 200) {element.innerHTML = this.responseText;}
+							if (this.status == 404) {element.innerHTML = "<h1>404 Article not found.</h1>";}
+						}
+					}
+				xhttp.open("GET", `articles/${file}`, true);
+				xhttp.send();
+
+				document.getElementById(`${underline}`).style.borderStyle = "double double double solid";
+				return;
+				}
+			} 	
+		</script>
 	</head>
-	<body style="background-color:black">
+	<body style="background-color:black" onload="getRandomImage()">
 		<div class="title">
-			<a href="../index.html"><img src="images/profile.jpg" alt="« ..still He smiles at me with eternal malice»"></a>
+			<a href="../index.html"><div id="randImage"></div></a>
 			<h1 id="header">Ѳад's каталог</h1>
 			<h2 id="subtitle-text">لا شيء جديد تحت الشمس  <br>لا يزال يبتسم لي بحقد أبدي</h2>
+			
 		</div>
 		
 		<div class="sidebar-list">
@@ -130,38 +215,36 @@
 				<a href="contact.html"><nav>Contact</nav></a>
 			</div>
 		</div>
-		<div class="content">
-<!--				<article>
-				<h3 class="article-date">Entry 17/09/2022 @17:02</h3> 
-				<pre>꧁ ⌇▂▂ԅᶘﾒ ͡ ͡° Ĺ̯ ͡ ͡°ᶅ ꧂, [27/7/22 9:34 PM]
-[Forwarded from ꧁ ⌇▂▂ԅᶘﾒ ͡ ͡° Ĺ̯ ͡ ͡°ᶅ ꧂]
-Nothing new under the sun, 'tis all about pre-arrangement.</pre>
-				<video width="450" height="auto" controls>
-  					<source src="videos/P349BdHUxlc-[00.30.267-00.50.934]-audio.mp4" type="video/mp4">
-				</video>
-				
-				</article>-->
-			<article>
-				<h3 class="article-date">⛮ &nbsp; [17/09/2022] &nbsp; &nbsp; ⏳18:46 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 🗺Τεκές</h3> 
-				<img src="images/274536004_1386740391791014_2910222569923619191_n.jpeg"><img src="images/274649643_407443954516419_8941232687967531613_n.jpeg">
-				<p>꧁ ⌇▂▂ԅᶘﾒ ͡ ͡° Ĺ̯ ͡ ͡°ᶅ ꧂, [17/09/22 18:30 PM]
-[ Photo ]
-I'm biohacker, it's nootropic, I- I swear</p>
-			</article>		<br>	
-			<article>
-				<h3 class="article-date">⛮ &nbsp; [16/09/2022] &nbsp; &nbsp; ⏳17:02 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 🗺Κάπου Όξω</h3> 
-				<img src="images/290900873_1448246212269917_6339395293043285831_n.jpeg"><img src="images/290631659_392978216150411_980201621362318933_n.jpeg">
-				<p>[Forwarded from ꧁ ⌇▂▂ԅᶘﾒ ͡ ͡° Ĺ̯ ͡ ͡°ᶅ ꧂]<br>
-Άσε λίγο και για το πουτσάκι μας, Ω φαλλικέ νέφελε</p><br>
-			</article>
-				
-		</div>
-<!--		<hr id="note_1_line" class="note_line"> </hr>
-		<i id="note_1_text">[Forwarded from ꧁ ⌇▂▂ԅᶘﾒ ͡ ͡° Ĺ̯ ͡ ͡°ᶅ ꧂]<br>
-[In reply to ꧁ ⌇▂▂ԅᶘﾒ ͡ ͡° Ĺ̯ ͡ ͡°ᶅ ꧂]<br>
-Fischer agrees.</i>
-	-->		
-
+		<div id="content" onload="loadHTML()">
+			<h2>⟱ <b>Pinned Post</b><h2>
+			<h3 class="article-date">⛮ &nbsp; <b>[21/09/2022]</b> &nbsp; &nbsp; ⏳<b>23:38</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 🗺Αχέρων</h3> 
+			<img class="article-image" src="images/photo_2022-09-21_23-33-44.jpg"><img class="article-image" src="images/photo_2022-09-21_23-33-43.jpg">
+				<p><br><br>&nbsp;꧁ ᕦ/̵͇̿/'̿'̿̿̿ ̿ᶘﾒ ͡ ͡° Ĺ̯ ͡ ͡°ᶅ  ꧂ — Today at 23:29
+<br>&nbsp;[ Photo ]<br><br></p>
+<div id="pinned_caption">
+<p><h4>Two kinds of mindstates, two pills:</h4>
+<i> A' </i>«Nothing new under the sun, <br><b>still He smiles at me with eternal malice.»</b><br>
+<i> B' </i>«Nothing new under the sun, <br><b>yet all is and has always been good.»</b></p><br>
+</div>
+				<div id="end-quote">
+				<q cite="https://www.youtube.com/watch?v=ihgAP5dAKEc"><h4>Τρεις ψυχές, τρεις προσευχές...</h4><p><i>A'</i> «Δοξάρι είμαι στα χέρια Σου, Κύριε· <br><b>&nbsp; &nbsp; τέντωσέ με, αλλιώς θα σαπίσω.»</b><br><i>B'</i> «Μη με παρατεντώσεις, Κύριε·<br><b>&nbsp; &nbsp; θα σπάσω.»</b><br><i>Γ'</i> «Παρατέντωσέ με, Κύριε,<br><b>&nbsp; &nbsp; κι ας σπάσω!»</b></p</q>
+				<sub style="text-align: right;">- Ν. Καζαντζάκης</sub>
+				</div>
+			</article>		<br>
+		</div>		
+		<hr  id="link_line"> </hr>
+		<aside class="external_links">
+			<a href="../index.rss"><sub style="float: top; font-size: 0.75em; margin-left: 80%;">∿ &nbsp; RSS</sub></a>
+			<h1>директория<h1>
+			<div id="post-1" class="post" style="float: left;">
+				<a href="#" onclick='loadHTML("content", "Article_0.html", "post-1")'><h5 class="link" id="article-1">⟿ &nbsp; Entry 00</h5></a>
+				<sup class="caption">(«Sunbathe your ballsack.»)</sup>
+			</div><hr class="article_line" style="margin-top: 20%; float: right;  width: 25%;"> </hr>
+			<div id="post-2" class="post" style="float: left;">
+				<a href="#" onclick='loadHTML("content", "Article_1.html", "post-2")'><h5 class="link" id="article-2">⟿ &nbsp; Entry 01</h5></a>
+				<sup class="caption">(«The litterateur's stim stack.»)</sup>
+			</div><hr class="article_line" style="margin-top: 20%; float: right;  width: 25%;"> </hr>
+		</aside>
 		
 	</body>
 </html>
