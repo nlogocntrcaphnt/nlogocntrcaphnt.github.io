@@ -72,8 +72,13 @@
 			text-decoration:none;
 		}
 
+		#content::-webkit-scrollbar{
+    display: none;
+  }
 		#content{
 			width: 570px;
+			max-height: 690px;
+			overflow: scroll;
 			float: left;
 			border-style: double;
 			font-variant: small-caps;
@@ -84,6 +89,8 @@
 			font-weight: normal;
 		}
 		.external_links{
+			overflow: scroll;
+			max-height: 500px;
 			padding-bottom: 1%;
 			border: double;
 			float: left;
@@ -91,6 +98,11 @@
 			margin-top: 6%;
 			font-variant: small-caps;
 		}
+		
+		.external_links::-webkit-scrollbar{
+    display: none;
+  }
+
 		.external_links h1{
 			text-align: center;
 			font-variant: small-caps;
@@ -185,14 +197,13 @@
 			}
 		</script>
 		<script>
-			function loadHTML(id, filename, underline){
+			function loadHTML(id, filename){
    				console.log(`div id: ${id}, filename: ${filename}`);
 
 				let xhttp;
 				let element = document.getElementById(id);
 				let file = filename;
 
-				let unerlined_element = underline;
 
 				if ( file ){
 					xhttp = new XMLHttpRequest();
@@ -205,11 +216,20 @@
 				xhttp.open("GET", `articles/${file}`, true);
 				xhttp.send();
 
-				document.getElementById(`${underline}`).style.borderStyle = "double double double solid";
+				
 				return;
 				}
 			} 	
 		</script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+   
+   				$('#content').load("articles/Article_4.html");
+
+			});
+</script>
 	</head>
 	<body style="background-color:black" onload="getRandomImage()">
 		<div class="title">
@@ -225,26 +245,12 @@
 				<a href="contact.html"><nav>Contact</nav></a>
 			</div>
 		</div>
-		<div id="content" onload="loadHTML()">
-			<h2>⟱ <b>Pinned Post</b><h2>
-			<h3 class="article-date">⛮ &nbsp; <b>[21/09/2022]</b> &nbsp; &nbsp; ⏳<b>23:38</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 🗺Αχέρων</h3> 
-			<img class="article-image" src="images/photo_2022-09-21_23-33-44.jpg"><img class="article-image" src="images/photo_2022-09-21_23-33-43.jpg">
-				<p style="text-align: right; padding:2%; margin-top:40%;">Ν. Καζατνζάκης<br>❝Αναφορά στον Γκρέκο❞<br></p>
-				<p id="idk">&nbsp;꧁ ᕦ/̵͇̿/'̿'̿̿̿ ̿ᶘﾒ ͡ ͡° Ĺ̯ ͡ ͡°ᶅ  ꧂ — Today at 23:29
-<br>&nbsp;[ Photo ]<br><br></p>
-<div id="pinned_caption">
-<h4>Two kinds of mindstates, two pills:</h4>
-<i> A' </i>«Nothing new under the sun, <br><b>still He smiles at me with eternal malice.»</b><br>
-<i> B' </i>«Nothing new under the sun, <br><b>yet all is and has always been good.»</b><br>
-</div>
-				<div id="end-quote">
-				<q cite="https://www.youtube.com/watch?v=ihgAP5dAKEc"><h4>❛Τρεις ψυχές, τρεις προσευχές...</h4><p><i>A'</i> «Δοξάρι είμαι στα χέρια Σου, Κύριε· <br><b>&nbsp; &nbsp; τέντωσέ με, αλλιώς θα σαπίσω.»</b><br><i>B'</i> «Μη με παρατεντώσεις, Κύριε·<br><b>&nbsp; &nbsp; θα σπάσω.»</b><br><i>Γ'</i> «Παρατέντωσέ με, Κύριε,<br><b>&nbsp; &nbsp; κι ας σπάσω!»❜</b></p></q>
-				<sub style="text-align: right !important;">- Ν. Καζαντζάκης</sub>
-				</div>
-			</article>		<br>
+		<div id="content" class="content">
+			
+			
 		</div>		
 		<hr  id="link_line"> </hr>
-		<aside class="external_links">
+		<aside class="external_links" >
 			<a href="../index.rss"><sub style="float: top; font-size: 0.75em; margin-left: 80%;">∿ &nbsp; RSS</sub></a>
 			<h1>директория<h1>
 			<div id="post-1" class="post" style="float: left;">
@@ -257,8 +263,13 @@
 			</div><hr class="article_line" style="margin-top: 20%; float: right;  width: 25%;"> </hr>
 			<div id="post-3" class="post" style="float: left;">
 				<a href="#" onclick='loadHTML("content", "Article_2.html", "post-3")'><h5 class="link" id="article-3">⟿ &nbsp; Entry 02</h5></a>
-				<sup class="caption">(« .»)</sup>
+				<sup class="caption">(«Crete.»)</sup>
 			</div><hr class="article_line" style="margin-top: 20%; float: right;  width: 25%;"> </hr>
+			<div id="post-4" class="post" style="float: left;">
+				<a href="#" onclick='loadHTML("content", "Article_3.html", "post-4")'><h5 class="link" id="article-4">⟿ &nbsp; Entry 03</h5></a>
+				<sup class="caption">(«Dox.»)</sup>
+			</div><hr class="article_line" style="margin-top: 20%; float: right;  width: 25%;"> </hr>
+			
 		</aside>
 		
 	</body>
