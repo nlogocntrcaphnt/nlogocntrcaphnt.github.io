@@ -66,12 +66,34 @@
 			text-decoration:none;
 		}
 
+		#countdown{
+			margin: auto;
+			width: 470px;
+			border-style: double;
+			border-color: white;
+			font-variant: small-caps;
+		}
+
+		#timer{		
+			text-align: center;
+			font-family: 'Monospace';
+			
+			font-style: italic;
+		}
+
+		#warning{
+			margin-left: 5%;
+			margin-right: 5%;
+			text-align: center;
+		}
 </style>
 <!--		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 -->
+
+		
 	</head>
 	<body style="background-color:black">
 		<div class="title">
@@ -87,7 +109,34 @@
 			</div>
 			<a href="https://raw.githubusercontent.com/nlogocntrcaphnt/nlogocntrcaphnt.github.io/main/images/profile.jpg">
 			<img  src="home_images/profile.jpg">
-			</a>
+			</a><br><br><br><br>
      		</div>
+		<div id="countdown">
+			<p id="timer">3:00</p>
+			<script>
+			const startingMinutes = 3;
+			let time = startingMinutes * 60;
+
+			const countdownEl = document.getElementById('timer');
+
+
+			setInterval(updateCountdown, 1000);
+
+			function updateCountdown(){
+				const minutes = Math.floor(time / 60);
+				let seconds = time % 60;
+
+				seconds = seconds < 10 ? '0' + seconds : seconds; 
+
+				countdownEl.innerHTML = `${minutes}:${seconds}`;
+
+				time--;
+				
+
+			}
+			</script>
+			<div id="warning">
+			<sup >Time's runnin' out big fella, so what's it gonna be? <b><i>wget -r</i></b> the page or let the domain irreversibly shift to an always-unique randomly generated new one? Your call.</sup></div>
+		</div>
 	</body>
 </html>
