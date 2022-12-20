@@ -34,7 +34,7 @@
 			text-decoration: underline !important;
 			font-variant: small-caps;
 			font-size: 1.3em;
-		
+			
 			margin: auto;
 			text-align: left;
 			width: 550px;
@@ -68,22 +68,20 @@
 
 		#countdown{
 			margin: auto;
-			width: 470px;
-			border-style: double;
-			border-color: white;
 			font-variant: small-caps;
 		}
 
 		#timer{		
 			text-align: center;
 			font-family: 'Monospace';
-			
+			font-variant: small-caps;
 			font-style: italic;
 		}
 
 		#warning{
-			margin-left: 5%;
-			margin-right: 5%;
+			font-variant: small-caps;
+			margin-left: 37%;
+			margin-right: 37%;
 			text-align: center;
 		}
 </style>
@@ -109,7 +107,7 @@
 			</div>
 			<a href="https://raw.githubusercontent.com/nlogocntrcaphnt/nlogocntrcaphnt.github.io/main/images/profile.jpg">
 			<img  src="home_images/profile.jpg">
-			</a><br><br><br><br>
+			</a>
      		</div>
 		<div id="countdown">
 			<p id="timer">3:00</p>
@@ -126,17 +124,21 @@
 				const minutes = Math.floor(time / 60);
 				let seconds = time % 60;
 
+				seconds = Math.abs(seconds)
 				seconds = seconds < 10 ? '0' + seconds : seconds; 
+				
 
 				countdownEl.innerHTML = `${minutes}:${seconds}`;
 
 				time--;
-				
-
+				if(minutes < 0){
+					document.getElementById("warning_text").innerHTML = "You're runnin' on borrowed time here<br> mate.";
+				}
 			}
 			</script>
-			<div id="warning">
-			<sup >Time's runnin' out big fella, so what's it gonna be? <b><i>wget -r</i></b> the page or let the domain irreversibly shift to an always-unique randomly generated new one? Your call.</sup></div>
+		</div><br><br>
+		<div id="warning">
+			<sup id="warning_text">Clock's tickin' big fella, so what's it gonna be? <b><i>wget -r</i></b> the page or let the domain irreversibly shift to an always-unique randomly generated new one?<br> Your call.</sup>
 		</div>
 	</body>
 </html>
