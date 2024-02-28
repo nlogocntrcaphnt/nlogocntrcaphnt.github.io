@@ -9,24 +9,32 @@ header{
 	width: 25%;
 	min-width: 300px;
 	margin: auto;
-	
+
+	display: flex;
+	justify-content: center;
+
+
 	white-space: nowrap;	
 
 	text-align: center;
 }
+
+#randImage{
+	margin-top: 40%;
+}
+
 #header-text{
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	padding-left: 20%;
 	text-align: center;
 }
 #title{
 	text-align:center;
-
+	
 	font-weight: bold;
 	font-variant: small-caps;
-}
-#subtitle-text{
-	text-align:center;
-	font-size:0.95rem;
-	font-weight: normal;
 }
 
 .container{
