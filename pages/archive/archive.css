@@ -9,17 +9,30 @@ header{
 	width: 25%;
 	min-width: 300px;
 	margin: auto;
-	
+
+	display: flex;
+	justify-content: center;
+
+
 	white-space: nowrap;	
 
 	text-align: center;
 }
+
+#randImage{
+	margin-top: 40%;
+}
+
 #header-text{
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	padding-left: 20%;
 	text-align: center;
 }
 #title{
 	text-align:center;
-
+	
 	font-weight: bold;
 	font-variant: small-caps;
 }
@@ -27,6 +40,7 @@ header{
 	text-align:center;
 	font-size:0.95rem;
 	font-weight: normal;
+	font-variant: small-caps;
 }
 
 #pfp{
@@ -38,11 +52,11 @@ header{
 	margin: auto;
 	border: double;
 }
-		.rss {
- 			margin: 0;
-  			font-size: 16px;
-  			float: right;
-			background: url(rss-svgrepo-com.svg)
+.rss {
+	margin: 0;
+	font-size: 16px;
+	float: right;
+	background: url(rss-svgrepo-com.svg)
 		}
 .container{
 	display: flex;
