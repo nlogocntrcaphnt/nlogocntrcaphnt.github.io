@@ -185,3 +185,6 @@ a{
 	margin-right: 5%;
 }
 
+.article_line{
+	margin:auto; min-width: 80%; text-align: right;
+}
