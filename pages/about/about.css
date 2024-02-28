@@ -59,6 +59,7 @@ header{
 	padding-bottom: 5%;	
 	text-align: right;
 	
+	min-width: 350px;
 	width: 20%;
 }
 a{
@@ -102,7 +103,7 @@ a{
 }
 
 .content-scrollable{
-	max-height: 45%;
+	max-height: 42%;
 	overflow: scroll;
 }
 .content sub{
@@ -149,7 +150,7 @@ p{
 
 	font-variant: small-caps;
 
-	max-height: 41vh;
+	max-height: 430px;
 	width: 100%;
 	margin-top: 6%;
 	
@@ -188,7 +189,7 @@ p{
 	padding: 3px;
 
 	width: 90%;
-	height: auto;
+	max-height: 30%;
 	margin: auto;		
 }
 
