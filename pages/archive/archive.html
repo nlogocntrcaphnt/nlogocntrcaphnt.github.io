@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="archive.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="../about_pfp_generation.js"></script>
+		<script src="scripts/article_loading.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+   
+   				$('.content').load("articles/Article_99.html");
+
+			});
+	</script>
+	</head>
+	<body style="background-color:black" onload="getRandomImage()">
+		<header>
+			<a href="../../index.html"><div id="randImage"></div></a>
+			<div id="header-text">
+				<h1 id="title">Ѳад's каталог</h1>
+				<h2 id="subtitle-text">لا شيء جديد تحت الشمس  <br>لا يزال يبتسم لي بحقد أبدي</h2>
+			</div>
+		</header>
+		<div class="container">
+			<div class="sidebar-list">
+				<div class="sidebar-list-links">
+					<a href="../about/about.html"><nav>About&nbsp; &nbsp;</nav></a>
+					<a href="../contact/contact.html"><nav>Contact</nav></a>
+				</div>
+			</div>
+			<div id="content" class="content">
+			
+			
+			</div>	
+			<aside class="sidebar_box">	
+				<div class="note_line"><hr></hr></div>
+				<div class="external_links">
+					<a href="index.rss"><sub style="float: top; font-size: 0.75em; margin-left: 85%;">∿ &nbsp; RSS</sub></a>
+					<h1>директория<h1>
+
+					<div class="post-container">
+						<div id="post-1" class="post" style="">
+							<a href="#" onclick='loadHTML("content", "Article_0.html", "post-1")'><div class="link" id="article-1">⟿ &nbsp; Entry 00</div></a>
+							<sup class="caption">(«Sunbathe your ballsack.»)</sup>
+						</div>
+						<hr class="article_line" style="margin: auto; min-width: 80%; text-align: right;"> </hr>
+					</div>
+
+					<div class="post-container">
+						<div id="post-2" class="post" style="">
+							<a href="#" onclick='loadHTML("content", "Article_1.html", "post-2")'><div class="link" id="article-2">⟿ &nbsp; Entry 01</div></a>
+							<sup class="caption">(«...»)</sup>
+						</div>
+						<hr class="article_line" style="margin: auto; min-width: 80%; text-align: right;"> </hr>
+					</div>
+
+					<div class="post-container">
+						<div id="post-3" class="post" style="">
+							<a href="#" onclick='loadHTML("content", "Article_2.html", "post-3")'><div class="link" id="article-3">⟿ &nbsp; Entry 02</div></a>
+							<sup class="caption">(«The litterateur's stim stack.»)</sup>
+						</div>
+						<hr class="article_line" style="margin: auto; min-width: 80%; text-align: right;"> </hr>
+					</div>
+
+					<div class="post-container">
+						<div id="post-4" class="post" style="">
+							<a href="#" onclick='loadHTML("content", "Article_3.html", "post-4")'><div class="link" id="article-4">⟿ &nbsp; Entry 03</div></a>
+							<sup class="caption">(«Leg Destroyer.»)</sup>
+						</div>
+						<hr class="article_line" style="margin:auto; min-width: 80%; text-align: right;"> </hr>
+					</div>
+				</div>
+			</div>
+		</aside>
+	</body>
+</html>

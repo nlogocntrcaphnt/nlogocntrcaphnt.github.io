@@ -1,0 +1,218 @@
+body {
+	position: relative;
+	margin-top: 3%;
+
+  	color: white; 
+}
+header{
+	float: top;
+	width: 25%;
+	min-width: 300px;
+	margin: auto;
+	
+	white-space: nowrap;	
+
+	text-align: center;
+}
+#header-text{
+	text-align: center;
+}
+#title{
+	text-align:center;
+
+	font-weight: bold;
+	font-variant: small-caps;
+}
+#subtitle-text{
+	text-align:center;
+	font-size:0.95rem;
+	font-weight: normal;
+}
+
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+	margin: auto;
+	width: 100%;
+
+	color: white !important;
+}
+
+.sidebar-list{
+	color: white !important;
+
+	font-weight: bold;
+	font-style: italic;
+	font-variant: small-caps;
+	font-size: 1.3rem;
+	
+	padding-bottom: 5%;	
+	text-align: right;
+	
+	width: 20%;
+}
+a{
+	color: white;
+	text-decoration:none;
+}
+.sidebar-list nav{
+	padding-right: 10%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+		
+#pfp{
+	float: left;
+	display: block;
+	padding: 3px;
+	width: 70px;
+	height: auto;
+	margin: auto;
+	border: double;
+}
+
+a{
+	color: white;
+	text-decoration:none;
+	}
+
+.content{
+	font-size: 0.85em;
+	
+	border-style: double;
+	max-width: 650px;
+	
+		
+	max-height: 75vh;
+}
+
+.content-scrollable::-webkit-scrollbar{
+	display: none;
+}
+
+.content-scrollable{
+	max-height: 45%;
+	overflow: scroll;
+}
+.content sub{
+	display: block;
+	width: 95%;
+
+	font-variant: small-caps; 
+
+	text-align: right;
+}
+#bio-title{
+	font-size: 1rem;
+	font-weight: bold;
+	font-variant: small-caps;
+
+	padding-top: 3.5%;
+	
+	text-align: center;
+}
+
+.section-title{
+	text-decoration: underline;
+	font-variant: small-caps;
+}
+		
+p{
+	font-variant: small-caps;
+
+	margin-right: 10%;
+	margin-left: 5%;
+}
+
+.sidebar_box{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	color: white !important;
+	
+	min-width: 350px;
+}
+
+.external_links{
+	border: double;
+
+	font-variant: small-caps;
+
+	max-height: 41vh;
+	width: 100%;
+	margin-top: 6%;
+	
+	white-space: nowrap;
+	
+}
+		
+.note_line{
+	text-align:left;
+
+	width: 1vw;
+	
+	margin-top: 15%;
+			}
+.link{
+	padding: 1%;
+
+	width: 100%;
+}
+.link:hover{
+	outline: solid white;
+	outline-width: thin;
+}
+.caption{
+	text-align: right;
+
+	padding-left: 5px;
+
+	margin-left: 45px;
+	margin-right: 5px;
+}
+
+#banner{
+	display: block;
+
+	padding: 3px;
+
+	width: 90%;
+	height: auto;
+	margin: auto;		
+}
+
+#typeracing{
+background-color: black; 
+color: white; 
+border-color: rgba(0,0,0,0.05);
+width: 25%;
+margin-left: 70%;
+font-variant: small-caps;
+}
+
+#arrow{
+	position: absolute;
+	top: 85%;
+	left: 64%;
+}
+
+#video{
+	position: absolute;
+	border: double;
+	width: 20%;
+	height: auto;
+	top: 73%;
+	left: 66.8%;
+}
+
+#terminal{
+	
+}
+
+.external_links::-webkit-scrollbar{
+	display: none;
+}
+

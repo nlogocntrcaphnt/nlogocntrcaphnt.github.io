@@ -1,0 +1,173 @@
+body {
+	position: relative;
+	margin-top: 3%;
+
+  	color: white; 
+}
+header{
+	float: top;
+	width: 25%;
+	min-width: 300px;
+	margin: auto;
+	
+	white-space: nowrap;	
+
+	text-align: center;
+}
+#header-text{
+	text-align: center;
+}
+#title{
+	text-align:center;
+
+	font-weight: bold;
+	font-variant: small-caps;
+}
+#subtitle-text{
+	text-align:center;
+	font-size:0.95rem;
+	font-weight: normal;
+}
+
+#pfp{
+	float: left;
+	display: block;
+	padding: 3px;
+	width: 70px;
+	height: auto;
+	margin: auto;
+	border: double;
+}
+		.rss {
+ 			margin: 0;
+  			font-size: 16px;
+  			float: right;
+			background: url(rss-svgrepo-com.svg)
+		}
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+	margin: auto;
+	width: 100%;
+
+	color: white !important;
+}
+
+.sidebar-list{
+	color: white !important;
+
+	font-weight: bold;
+	font-style: italic;
+	font-variant: small-caps;
+	font-size: 1.3rem;
+	
+	padding-bottom: 5%;	
+	text-align: right;
+	
+	width: 20%;
+}
+a{
+	color: white;
+	text-decoration:none;
+}
+.sidebar-list nav{
+	padding-right: 10%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.note_line{
+	text-align:left;
+
+	width: 1vw;
+	
+	margin-top: 15%			
+}
+
+.content::-webkit-scrollbar{
+    display: none;
+  }
+.content{
+	font-size: 0.85em;
+	
+	border-style: double;
+	max-width: 650px;
+	overflow-y: scroll;	
+		
+	max-height: 75vh;
+
+	font-variant: small-caps;
+}
+.content h2{
+	text-align: center;
+	font-variant: small-caps;
+	font-weight: normal;
+}
+.sidebar_box{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	color: white !important;
+	
+	min-width: 350px;
+}
+
+.external_links{
+	border: double;
+
+	font-variant: small-caps;
+	max-width: 40vh;
+	max-height: 60vh;
+	width: 100%;
+	margin-top: 6%;
+	overflow: scroll;
+	white-space: nowrap;
+	
+}
+.external_links::-webkit-scrollbar{
+    display: none;
+}
+
+.external_links h1{
+	text-align: center;
+	font-variant: small-caps;
+}
+
+.post-container{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: start;
+	padding-bottom: 10%;
+}
+
+
+
+
+
+
+.link{
+	border-width:thin;
+	font-weight: normal;
+	font-style:italic;
+	text-align: left;i
+	font-variant: small-caps;
+}
+.post{
+		
+	max-width:70%;
+	padding-right: 5%;
+	margin-left: 5%;	
+}
+
+
+.caption{
+	font-size: 0.6em;
+	font-weight: normal;
+	text-align: left;
+			
+			
+	margin-right: 5%;
+}
+

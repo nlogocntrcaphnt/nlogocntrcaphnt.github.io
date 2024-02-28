@@ -1,0 +1,87 @@
+body {
+	position: relative;
+	margin-top: 10%;
+  	color: white; 
+}
+.title{
+	text-align: center;
+	width: 50%;
+	margin: auto;
+	float: top;
+}
+#header{
+	text-align:center;
+	font-weight: bold;
+			
+	font-variant: small-caps;
+}
+#subtitle-text{
+	text-align:center;
+	font-size:0.95rem;
+}
+
+.content{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	color: white !important;
+}
+.sidebar-list{
+	color: white !important;
+	font-weight: bold;
+	font-style: italic;
+	font-variant: small-caps;
+	font-size: 1.3rem;
+			
+	text-align: right;
+	min-width: 5vw;
+	max-width: 10vw;
+	
+}
+a{
+	color: white;
+	text-decoration:none;
+}
+.sidebar-list nav{
+	padding-top: 13%;
+	padding-bottom: 13%;
+}
+.sidebar-list-links{
+	text-align: left;
+	padding-right: 8%;
+}
+
+.profile-img{
+	text-align: center;	
+}
+img{
+	width: auto;	
+	max-height: 32vh;
+
+	border-style: double;
+	border-color: white;
+}
+
+.right-bar{
+	min-width: 5vw;
+	max-width: 10vw;
+}
+
+#countdown{
+	float: bottom;	
+	margin: auto;
+	font-variant: small-caps;
+}
+
+#timer{		
+	text-align: center;
+	font-family: 'Monospace';
+	font-variant: small-caps;
+	font-style: italic;
+}
+#warning{
+	font-variant: small-caps;
+	margin-left: 37%;
+	margin-right: 37%;
+	text-align: center;
+}

@@ -1,0 +1,190 @@
+body {
+	position: relative;
+	margin-top: 3%;
+
+  	color: white; 
+}
+header{
+	float: top;
+	width: 25%;
+	min-width: 300px;
+	margin: auto;
+	
+	white-space: nowrap;	
+
+	text-align: center;
+}
+#header-text{
+	text-align: center;
+}
+#title{
+	text-align:center;
+
+	font-weight: bold;
+	font-variant: small-caps;
+}
+#subtitle-text{
+	text-align:center;
+	font-size:1rem;
+}
+
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+	margin: auto;
+	width: 100%;
+
+	color: white !important;
+}
+
+.sidebar-list{
+	color: white !important;
+
+	font-weight: bold;
+	font-style: italic;
+	font-variant: small-caps;
+	font-size: 1.3rem;
+	
+	padding-bottom: 5%;	
+	text-align: right;
+	
+	width: 20%;
+}
+a{
+	color: white;
+	text-decoration:none;
+}
+.sidebar-list nav{
+	
+	padding-right: 10%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.sidebar_box{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: start;
+	color: white !important;
+	width: 20%;
+	min-width: 370px;
+}
+
+.top-content-box{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 100%;
+}
+
+#banner{
+	display: block;
+	float: left;
+	height: 45%;
+	width: 45%;
+	padding-left: 2%;
+	padding-right: 10%;
+}
+
+.tree_structure{
+	font-variant: small-caps;
+	font-weight: normal;
+	text-align: right;
+	font-size: 0.9em;
+
+	margin-right: 0;
+	margin-top: 7%;
+}
+		#pfp{
+			float: left;
+			display: block;
+			padding: 3px;
+			width: 70px;
+			height: auto;
+			margin: auto;
+			border: double;
+		}
+
+		a{
+			color: white;
+			text-decoration:none;
+		}
+
+.content{
+	font-size: 1rem;
+	
+	border-style: double;
+	max-width: 650px;
+	
+		
+	max-height: 75vh;
+}
+
+		p{
+			
+			padding-left: 15px;
+			padding-right: 30px;
+		}
+
+		.note_line{
+			text-align:left;
+			width: 3%;
+			float:left;
+		}
+		#note_1_line{
+			
+			margin-top: 35%;
+		}
+
+		#note_1_text{
+			padding: 5px 20px 7px 7px;
+			border-style: double;
+			float:left;
+			margin-top: 34.5%;
+		}
+		
+		video{
+			border-style: double;
+		}
+		#end-quote{
+			margin-left:55%;
+			margin-top:5px;
+			margin-right: 5px;
+			
+			padding: 5px;
+			font-variant: small-caps;
+			font-style: italic;
+		}
+		
+		.link{
+			text-align: right;
+			font-variant: small-caps;
+			font-style: italic;
+			margin-right: 20px;
+		}
+
+		
+		.links_list_left{
+			
+			float: left;
+			margin-left: 0px;
+			font-size: 0.9em;
+			font-variant: small-caps;
+			
+			list-style-type: none;
+			text-align: left;
+			
+		}
+
+		.links_list_right{
+			
+			font-size: 0.9em;
+			margin-right: 5%;
+			float: right;
+			font-variant: small-caps;
+			list-style-type: none;
+			text-align: right;
+			
+		}
