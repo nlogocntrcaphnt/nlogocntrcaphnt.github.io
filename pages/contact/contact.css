@@ -9,23 +9,37 @@ header{
 	width: 25%;
 	min-width: 300px;
 	margin: auto;
-	
+
+	display: flex;
+	justify-content: center;
+
+
 	white-space: nowrap;	
 
 	text-align: center;
 }
+
+#randImage{
+	margin-top: 40%;
+}
+
 #header-text{
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	padding-left: 20%;
 	text-align: center;
 }
 #title{
 	text-align:center;
-
+	
 	font-weight: bold;
 	font-variant: small-caps;
 }
 #subtitle-text{
 	text-align:center;
 	font-size:1rem;
+	font-variant: small-caps;
 }
 
 .container{
@@ -165,11 +179,21 @@ a{
 			margin-right: 20px;
 		}
 
+.links_list{
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+	padding-right: 6%;
+	flex-wrap: nowrap;
+	margin-left: auto;
+	
+}
+
 		
 		.links_list_left{
 			
-			float: left;
-			margin-left: 0px;
+			
+			
 			font-size: 0.9em;
 			font-variant: small-caps;
 			
@@ -181,8 +205,8 @@ a{
 		.links_list_right{
 			
 			font-size: 0.9em;
-			margin-right: 5%;
-			float: right;
+			
+			
 			font-variant: small-caps;
 			list-style-type: none;
 			text-align: right;
