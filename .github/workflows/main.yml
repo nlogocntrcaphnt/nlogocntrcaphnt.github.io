@@ -3,10 +3,7 @@ name: deployment workflow
 on:
 	push:
 		branches:
-			-main
-	pull request:
-		branches:
-			-main
+			- main
 
 jobs:
 	build:
