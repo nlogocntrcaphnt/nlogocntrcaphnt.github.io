@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: load action to read files
         uses: actions/checkout@v2
-    steps:
+ 
       - name: update articles
         run: echo "FUCK YOU"
   
