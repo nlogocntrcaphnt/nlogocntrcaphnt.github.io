@@ -12,5 +12,5 @@ jobs:
         uses: actions/checkout@v2
     steps:
       - name: update articles
-        run: sh ./update_articles.sh
-
+        run: echo "FUCK YOU"
+  
