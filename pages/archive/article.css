@@ -18,15 +18,17 @@ article{
 .article_images{
 	display:flex;
 	justify-content: center;
-	max-height: 400px;
+	max-height: 250px;
 	
 	width: 100%;
 }
 
 .article_images img{
 	border-style: double;
-	
-	width: 45%;
+
+	max-height: 250px;
+	margin: auto;
+	width: 98%;
 }
 
 .article_content p{

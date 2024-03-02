@@ -111,7 +111,7 @@ a{
 	overflow-y: scroll;	
 		
 	max-height: 75vh;
-
+	min-width: 650px;
 	font-variant: small-caps;
 }
 .content h2{
