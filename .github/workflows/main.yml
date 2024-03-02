@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: update articles
+      - name: load action to read files
         uses: actions/checkout@v2
+    steps:
+      - name: update articles
         run: sh ./update_articles.sh
 
