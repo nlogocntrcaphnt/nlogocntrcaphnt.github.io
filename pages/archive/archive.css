@@ -111,7 +111,7 @@ a{
 	overflow-y: scroll;	
 		
 	max-height: 75vh;
-	min-width: 650px;
+	min-width: 400px;
 	font-variant: small-caps;
 }
 .content h2{
@@ -132,11 +132,11 @@ a{
 	border: double;
 
 	font-variant: small-caps;
-	max-width: 40vh;
+	
 	max-height: 60vh;
 	width: 100%;
 	margin-top: 6%;
-	overflow: scroll;
+	
 	white-space: nowrap;
 	
 }
@@ -154,6 +154,7 @@ a{
 	flex-wrap: nowrap;
 	justify-content: start;
 	padding-bottom: 10%;
+	width: 100%;
 }
 
 
@@ -186,5 +187,5 @@ a{
 }
 
 .article_line{
-	margin:auto; min-width: 80%; text-align: right;
+	margin-right: 0; min-width: 20%; max-width: 50%; margin-left: auto; height: 1%;
 }
