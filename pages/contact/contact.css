@@ -77,14 +77,7 @@ a{
 	padding-bottom: 2%;
 }
 
-.sidebar_box{
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: start;
-	color: white !important;
-	width: 20%;
-	min-width: 370px;
-}
+
 
 .top-content-box{
 	display: flex;
@@ -127,7 +120,7 @@ a{
 		}
 
 .content{
-	font-size: 1rem;
+	font-size: 0.85em;
 	
 	border-style: double;
 	max-width: 650px;
@@ -142,11 +135,6 @@ a{
 			padding-right: 30px;
 		}
 
-		.note_line{
-			text-align:left;
-			width: 3%;
-			float:left;
-		}
 		#note_1_line{
 			
 			margin-top: 35%;
@@ -212,3 +200,43 @@ a{
 			text-align: right;
 			
 		}
+
+.sidebar_box{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	color: white !important;
+	
+	min-width: 350px;
+}
+
+.external_links{
+	border: double;
+
+	font-variant: small-caps;
+
+	max-height: 430px;
+	width: 100%;
+	margin-top: 6%;
+	
+	white-space: nowrap;
+	
+}
+		
+.note_line{
+	text-align:left;
+
+	width: 1vw;
+	
+	margin-top: 15%;
+			}
+.link{
+	padding: 1%;
+
+	width: 100%;
+}
+.link:hover{
+	outline: solid white;
+	outline-width: thin;
+}
+
